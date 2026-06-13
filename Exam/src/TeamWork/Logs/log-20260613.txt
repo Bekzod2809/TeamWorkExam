@@ -1,0 +1,14 @@
+2026-06-13 16:47:21.160 +05:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2026-06-13 16:47:21.444 +05:00 [INF] Now listening on: https://localhost:7148
+2026-06-13 16:47:21.448 +05:00 [INF] Now listening on: http://localhost:5209
+2026-06-13 16:47:21.476 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-13 16:47:21.480 +05:00 [INF] Hosting environment: Development
+2026-06-13 16:47:21.482 +05:00 [INF] Content root path: C:\Users\yoldo\OneDrive\Desktop\TeamWorkExam\Exam\src\TeamWork
+2026-06-13 16:47:22.668 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7148/swagger/index.html - null null
+2026-06-13 16:47:23.061 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7148/_vs/browserLink - null null
+2026-06-13 16:47:23.061 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7148/_framework/aspnetcore-browser-refresh.js - null null
+2026-06-13 16:47:23.068 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7148/swagger/index.html - 200 null text/html;charset=utf-8 402.9505ms
+2026-06-13 16:47:23.086 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7148/_framework/aspnetcore-browser-refresh.js - 200 14921 application/javascript; charset=utf-8 24.8707ms
+2026-06-13 16:47:23.339 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7148/_vs/browserLink - 200 null text/javascript; charset=UTF-8 278.5603ms
+2026-06-13 16:47:23.372 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7148/swagger/v1/swagger.json - null null
+2026-06-13 16:47:23.386 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7148/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 13.92ms
