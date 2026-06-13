@@ -21,6 +21,18 @@ namespace TeamWork.Controllers
             return await _foodService.GetAllAsync();
         }
 
+        [HttpGet("available")]
+        public async Task<IEnumerable<FoodGetDto>> GetAvailable()
+        {
+            return await _foodService.GetAvailableAsync();
+        }
+
+        [HttpGet("search")]
+        public async Task<IEnumerable<FoodGetDto>> Search([FromQuery] string name)
+        {
+            return await _foodService.SearchByNameAsync(name);
+        }
+
         [HttpGet("{id}")]
         public async Task<FoodGetDto?> GetById(long id)
         {
