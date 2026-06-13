@@ -31,6 +31,11 @@ namespace TeamWork.Services
             var food = foodDto.ToEntity();
             await _repository.AddAsync(food);
         }
+        public async Task<IEnumerable<FoodGetDto>> GetByCategoryIdAsync(long categoryId)
+        {
+            var foods = await _repository.GetByCategoryIdAsync(categoryId);
+            return foods.ToGetDtoList();
+        }
 
         public async Task UpdateAsync(long id, FoodUpdateDto foodDto)
         {

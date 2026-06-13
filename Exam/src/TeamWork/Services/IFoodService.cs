@@ -6,6 +6,7 @@ namespace TeamWork.Services
     {
         Task<IEnumerable<FoodGetDto>> GetAllAsync();
         Task<FoodGetDto?> GetByIdAsync(long id);
+        Task<IEnumerable<FoodGetDto>> GetByCategoryIdAsync(long categoryId);
         Task AddAsync(FoodCreateDto foodDto);
         Task UpdateAsync(long id, FoodUpdateDto foodDto);
         Task DeleteAsync(long id);
