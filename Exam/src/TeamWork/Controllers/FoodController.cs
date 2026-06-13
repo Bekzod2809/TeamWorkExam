@@ -44,5 +44,11 @@ namespace TeamWork.Controllers
         {
             await _foodService.DeleteAsync(id);
         }
+        [HttpGet("category/{categoryId}")]
+        public async Task<IEnumerable<FoodGetDto>> GetByCategoryId(long categoryId)
+        {
+            return await _foodService.GetByCategoryIdAsync(categoryId);
+        }
     }
+    
 }

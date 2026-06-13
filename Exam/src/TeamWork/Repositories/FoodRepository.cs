@@ -44,5 +44,11 @@ namespace TeamWork.Repositories
                 await _context.SaveChangesAsync();
             }
         }
+        public async Task<IEnumerable<Food>> GetByCategoryIdAsync(long categoryId)
+        {
+            return await _context.Foods
+                .Where(f => f.CategoryId == categoryId)
+                .ToListAsync();
+        }
     }
 }
