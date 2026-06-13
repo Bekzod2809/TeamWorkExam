@@ -1,4 +1,5 @@
-﻿using TeamWork.Entities;
+﻿using TeamWork.Dtos;
+using TeamWork.Entities;
 
 namespace TeamWork.Repositories;
 
