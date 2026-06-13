@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using TeamWork.Data;
+using TeamWork.Dtos;
 using TeamWork.Entities;
 
 namespace TeamWork.Repositories;
