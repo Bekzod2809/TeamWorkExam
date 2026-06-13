@@ -1,5 +1,6 @@
 using Serilog;
 using TeamWork.Configurations;
+using TeamWork.Repositories;
 
 namespace TeamWork
 {
@@ -14,27 +15,26 @@ namespace TeamWork
 
             // Add services to the container.
             builder.Services.AddControllers();
-            // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
             builder.ConfigureDB();
 
+            // Repository larni ro'yxatdan o'tkazish
+            builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+
             var app = builder.Build();
 
-            // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
             {
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
 
-            // Har bir requestni log qiladi
             app.UseSerilogRequestLogging();
 
             app.UseHttpsRedirection();
 
-            // Exceptionlarni log qiladi
             app.UseExceptionHandler(errorApp =>
             {
                 errorApp.Run(async context =>
