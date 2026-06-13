@@ -52,5 +52,17 @@ namespace TeamWork.Services
         }
 
         public async Task DeleteAsync(long id) => await _repository.DeleteAsync(id);
+
+        public async Task<IEnumerable<FoodGetDto>> GetAvailableAsync()
+        {
+            var foods = await _repository.GetAvailableAsync();
+            return foods.ToGetDtoList();
+        }
+
+        public async Task<IEnumerable<FoodGetDto>> SearchByNameAsync(string name)
+        {
+            var foods = await _repository.SearchByNameAsync(name);
+            return foods.ToGetDtoList();
+        }
     }
 }

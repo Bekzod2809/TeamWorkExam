@@ -10,5 +10,7 @@ namespace TeamWork.Repositories
         Task AddAsync(Food food);
         Task UpdateAsync(Food food);
         Task DeleteAsync(long id);
+        Task<IEnumerable<Food>> GetAvailableAsync();
+        Task<IEnumerable<Food>> SearchByNameAsync(string name);
     }
 }

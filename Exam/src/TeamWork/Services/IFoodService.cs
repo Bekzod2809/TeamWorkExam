@@ -10,5 +10,7 @@ namespace TeamWork.Services
         Task AddAsync(FoodCreateDto foodDto);
         Task UpdateAsync(long id, FoodUpdateDto foodDto);
         Task DeleteAsync(long id);
+        Task<IEnumerable<FoodGetDto>> GetAvailableAsync();
+        Task<IEnumerable<FoodGetDto>> SearchByNameAsync(string name);
     }
 }

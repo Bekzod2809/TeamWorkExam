@@ -48,6 +48,18 @@ namespace TeamWork.Repositories
         {
             return await _context.Foods
                 .Where(f => f.CategoryId == categoryId)
+
+        public async Task<IEnumerable<Food>> GetAvailableAsync()
+        {
+            return await _context.Foods
+                .Where(f => f.IsAvailable)
+                .ToListAsync();
+        }
+
+        public async Task<IEnumerable<Food>> SearchByNameAsync(string name)
+        {
+            return await _context.Foods
+                .Where(f => f.Name.Contains(name))
                 .ToListAsync();
         }
     }
