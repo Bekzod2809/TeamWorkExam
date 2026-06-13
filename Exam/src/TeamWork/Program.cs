@@ -1,6 +1,8 @@
 using Serilog;
 using TeamWork.Configurations;
 using TeamWork.Repositories;
+using TeamWork.Services;
+using TeamWork.Repositories;
 
 namespace TeamWork
 {
@@ -19,6 +21,9 @@ namespace TeamWork
             builder.Services.AddSwaggerGen();
 
             builder.ConfigureDB();
+
+            builder.Services.AddScoped<IFoodRepository, FoodRepository>();
+            builder.Services.AddScoped<IFoodService, FoodService>();
 
             // Repository larni ro'yxatdan o'tkazish
             builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
