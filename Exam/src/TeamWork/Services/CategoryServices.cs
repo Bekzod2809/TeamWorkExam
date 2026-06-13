@@ -1,15 +1,14 @@
 using TeamWork.Dtos;
-using TeamWork.Entities;
 using TeamWork.Mappings;
 using TeamWork.Repositories;
 
 namespace TeamWork.Services;
 
-public class CategoryService : ICategoryService
+public class CategoryServices : ICategoryService
 {
     private readonly ICategoryRepository _categoryRepository;
 
-    public CategoryService(ICategoryRepository categoryRepository)
+    public CategoryServices(ICategoryRepository categoryRepository)
     {
         _categoryRepository = categoryRepository;
     }
@@ -36,7 +35,7 @@ public class CategoryService : ICategoryService
 
     public async Task UpdateAsync(long id, CategoryUpdateDto dto)
     {
-        Category? category = await _categoryRepository.GetByIdAsync(id);
+        var category = await _categoryRepository.GetByIdAsync(id);
         if (category is null) return;
 
         category.UpdateEntity(dto);
